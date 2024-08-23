@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: grpc-client-demo
+
+server:
+  port: 8083
+
+grpc:
+  client:
+    test:
+      address: 'static://127.0.0.1:9090'
+#      address: 'static://35.193.11.39/pppp'
+#      address: 'static://grpc-server.default.svc.cluster.local:9090'
+#      address: 'static://grpc-server:9090'
+      enableKeepAlive: true
+      keepAliveWithoutCalls: true
+      negotiation-type: plaintext
+    test2:
+      #      address: 'static://127.0.0.1:9090'
+      address: 'static://35.193.11.39/test2'
+      #      address: 'static://grpc-server.default.svc.cluster.local:9090'
+      #      address: 'static://grpc-server:9090'
+      enableKeepAlive: true
+      keepAliveWithoutCalls: true
+      negotiation-type: plaintext
+

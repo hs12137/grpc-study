@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "org.test.lib";
+option java_outer_classname = "TestProto";
+
+service Test {
+  rpc SayHello (HelloRequest) returns (HelloReply) {}
+  rpc RepeatedTest (RepeatedRequest) returns (RepeatedReply) {}
+  rpc ServerStreamTest (stream ServerStreamRequest) returns (stream ServerStreamReply) {}
+}
+package test;
+message HelloRequest {
+  string name = 1;
+}
+
+message HelloReply {
+  string message = 1;
+  string timestamp = 2;
+}
+
+message RepeatedRequest {
+  repeated int64 seat_id = 1 [packed=true];
+}
+
+message SeatInfo {
+  int64 seat_id = 1;
+  string section = 2;
+  int32 row_num = 3;
+  int32 col_num = 4;
+}
+
+message RepeatedReply {
+  repeated test.SeatInfo seat_info = 1;
+}
+
+message ServerStreamRequest {
+  int64 test_id = 1;
+}
+
+message ServerStreamReply {
+  int64 id = 1;
+  string title = 2;
+  string content = 3;
+}

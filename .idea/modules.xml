@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/grpc-client-demo.main.iml" filepath="$PROJECT_DIR$/.idea/modules/grpc-client-demo.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/grpc-server-demo.main.iml" filepath="$PROJECT_DIR$/.idea/modules/grpc-server-demo.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/spring-grpc-study.iml" filepath="$PROJECT_DIR$/.idea/spring-grpc-study.iml" />
+    </modules>
+  </component>
+</project>
